@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MATRIX</title>
+<meta charset="windows-1256" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0' name='viewport' />
+<link rel="stylesheet" href="assets/css/assets.css" />
+<script type="text/javascript">let loginError = "$(error)"</script> <script src="js/hotCookie.min.js"></script>
+<script src="js/hotInImprover.min.js"></script>
+</script>
+
+</head>
+
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	//<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+<body>
+<main>
+<center>
+  <div class="marque">
+                <marquee direction="right">
+                    <span id="Bar_News">...:::: well com in Madil Net ::::...</span>
+                </marquee>
+            </div>
+<div>
+            <h5> <!-- Time Script-->
+                <div id="clock">Loading...</div>
+                <script type="text/javascript">
+                    function refrClock() {
+                        var d = new Date();
+                        var s = d.getSeconds();
+                        var m = d.getMinutes();
+                        var h = d.getHours();
+                        var day = d.getDay();
+                        var date = d.getDate();
+                        var month = d.getMonth();
+                        var year = d.getFullYear();
+                        var days = new Array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                        var months = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+                        var am_pm;
+                        if (s < 10) {
+                            s = "0" + s
+                        }
+                        if (m < 10) {
+                            m = "0" + m
+                        }
+                        if (h > 12) {
+                            h -= 12;
+                            am_pm = "Pm"
+                        } else {
+                            am_pm = "Am"
+                        }
+                        if (h < 10) {
+                            h = "0" + h
+                        }
+                        document.getElementById("clock").innerHTML = days[day] + " " + date + "  " + months[month] + " " + year + "   |   Time :  " + h + ":" + m + ":" + s + " " + am_pm;
+                        setTimeout("refrClock()", 1000);
+                    }
+                    refrClock();
+                </script>
+            </h5> </div>
+		   <div class="menu">
+    <ul>
+     <a href="pointOfSale.html"><li class="active">Sales<i class="icon-home"></i></li></a>
+     <a href="priceingLest.html"><li>Pricing<i class="icon-th"></i></li></a>
+     <a href="pricei11.html"><li>Packages<i class="icon-tag"></i></li></a>
+	 <a href="#" onclick="document.getElementById('alert-back2').style.display = ('block')"><li>Contact us<i class="icon-phone"></i></li></a>
+    </ul>
+            <span><font color="white" size="6"> Madil Net </font></span>
+        </div>
+    </div>
+            <div class="form-box">
+		        <form name="login" action="$(link-login-only)" method="post"
+		            $(if chap-id) onSubmit="return doLogin()" $(endif)>	
+		            <input type="hidden" name="dst" value="$(link-orig)" />
+		            <input type="hidden" name="popup" value="true" />
+                        <div class="form-title"><h4>����� ������</h4>
+						<span><img src="img/logo.svg"" width="250 height="100"></span>
+						 <label>
+    	            <div class="input-field">
+                       <span class="icon-user"></span><input id='uname' type="text" placeholder="��� ��������" name="username" required improve-input rm-white-spaces to-lower to-arabic-numbers />
+		            </div>
+    	            <div class="input-field">
+                        <span class="icon-lock"></span><input id='paswd'type="password" placeholder="���� ����" name="password"required improve-input rm-white-spaces to-lower to-arabic-numbers  />
+		            </div>
+					 <div class="">
+                <input checked id='remember' type='checkbox' name='remember' value="ON">
+                <label for="remember" style="color: #1D0037;">��� ������ �����</label>
+            </div>
+		            <div class="submit">
+                        <button class="submit" type="submit">
+			        	    <span>�������� ��������</span></button>
+                   </div>
+			        $(if trial == 'yes')
+	                    <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+	                        <div class="trial"><span>����� ��������</div></a>
+					<p>$(endif)
+		        </p>
+           <!--    SLiderShow    -->
+                       <!-- Don't Delete this line license Code   ©ahmedawad-->
+        <footer class="copyright2">
+            <tr>
+                <p style="height: 50px;" align="center" valign="center">
+                    <font style="background:rgba(0,0,0,0.4);color: #FFF;font-size: 15px;">
+
+                   
+                        Developed &amp; Powered By<br>
+                        <a href="tel:01551525573">
+                            🇦​🇭​🇲​🇪​🇩​ 🇦​🇼​🇦​🇩​ </a><br>
+                        <b style="color: #FFFF00; font-size: 9px;">
+                            [we are not
+                            responsible for any kind of misuse by this app]</b>
+
+                    </font>
+                    </td>
+            </tr>
+        </footer>
+        <!-- /End of license ©ahmedawad-->
+<!-- Modal -->
+$(if error)
+    <div id="alert-error" class="alert-back" onclick="this.style.display = ('none')">	
+        <div class="modal">
+            <div class="modal-icon error"><i class="icon-error"></i></div>
+            <div class="title error">����� ���:</div>
+            <div class="modal-clear"></div>
+            <div id="line"></div>
+            <div class="modal-body">
+                <p><script type="text/javascript">
+var error = "$(error)";
+if (error == "simultaneous session limit reached") {
+document.write("simultaneous session limit reached");
+}
+else if (error == "invalid username or password") {
+document.write("invalid username or password");
+}
+else if (error == "access denied at this time") {
+document.write("access denied at this time");
+}
+else if (error == "uptime limit reached") {
+document.write("uptime limit reached..");
+}
+else if (error == "invalid password") {
+document.write("invalid password");
+}
+else if (error == "no more sessions are allowed for user $(username)") {
+document.write("no more sessions are allowed for user $(username)");
+}
+else if (error == "no valid profile found") {
+document.write("no valid profile found");
+}
+else if (error == "transfer limit reached") {
+document.write("transfer limit reached");
+}
+else if (error == "user $(username) has reached traffic limit") {
+document.write("user $(username) has reached traffic limit");
+}
+else if (error == "invalid Calling-Station-Id") {
+document.write("invalid Calling-Station-Id");
+}
+else if (error == "user $(username) is not allowed to log in from this MAC address") {
+document.write("user $(username) is not allowed to log in from this MAC address");
+}
+else if(error.search("not found") != -1) {
+document.write("not found");
+}
+else if (error == "radius timeout") {
+document.write("radius timeout");
+}
+else document.write("$(error)")
+                </script></p>
+            </div>
+        </div>
+    </div>
+$(endif)
+<!-- End Modal -->
+    </div>
+                     </center>
+					    </div>
+            <div id="alert-back2" onclick="document.getElementById('alert-back2').style.display = ('none')">
+   <div class="alert2">
+   <span class="closebtn2"><strong style="font-size: 2rem;">&times;</strong></span>
+   <strong>�������:</strong> 00905359225433
+   </div>
+      <div class="alert2">
+   <span class="closebtn2"><strong style="font-size: 2rem;">&times;</strong></span>
+   <strong>����� �����:</strong> 
+   </div>
+        </div>
+    </div>
+    
+    </center>
+</main>
+
+</body>
+
+</html>
